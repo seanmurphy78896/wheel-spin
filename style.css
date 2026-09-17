@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #13111b;
+    width: 100%;
+}
+
+header{
+    text-align: center;
+    color: white;
+    font-family: papyrus, copperplate, fantasy, sans-serif;
+    font-size: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+#addElements{
+    text-align: center;
+    overflow: hidden;
+    width: 25vw;
+    background-color: rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+#wheelWrapper{
+    position: relative;
+}
+
+#wheelSpace{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    overflow: hidden;
+    margin: 1%;
+    margin-left: 15%;
+}
+
+#wheel{
+    transform-box: fill-box;
+    width: 40vw;
+}
+
+#extras{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.slowWheel{
+    animation: spin 10s linear infinite;
+}
+
+.fastWheel{
+    animation: fastSpin 10s cubic-bezier(0, 0, 0.58, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#elemButton{
+    background-color: rgb(0, 197, 0);
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+}
+
+#elemTitle{
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.elemField{
+    margin: 5px;
+}
+
+.textBox{
+    font-family: papyrus, copperplate, fantasy, sans-serif;
+}
+
+.numBox{
+    width: 30px;
+}
+
+.xButton{
+    background-color: red;
+}
+
+@media (orientation: portrait){
+    #wheelSpace{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #wheel{
+        width: 80vw;
+    }
+    #addElements{
+        width: 50vw;
+    }
+}
+
+#winner{
+    margin: auto;
+    align-self: center;
+    justify-content: center;
+}
+
+.sliceText{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+    margin: 0;
+}

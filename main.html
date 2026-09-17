@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Spin The Wheel</h1>
+    </header>
+    <div id="wheelSpace" class="container">
+        <div id="wheelWrapper">
+            <svg id="wheel" class="slowWheel" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="100" fill="rgb(220, 220, 220)"/>
+            </svg>
+            <svg id="extras" viewBox="0 0 200 200">
+                <path d="M 100 5 98 0 102 0 Z" fill="black" />
+                <circle cx="100" cy="100" r="20" fill="rgb(180, 180, 180)" />
+            </svg>
+        </div>
+        <span id="addElements">
+            <h1 id="elemTitle">Add Element</h1>
+            <div id="emptyElement"></div>
+            <button id="elemButton">
+                &plus; Element
+            </button>
+        </span>
+    </div>
+    <dialog id="winner">
+        <h2>Winner:</h2>
+    </dialog>
+</body>
+</html>
